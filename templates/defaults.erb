@@ -1,0 +1,14 @@
+NAME=jenkins
+JAVA=/usr/bin/java
+PIDFILE=/var/run/jenkins/jenkins.pid
+JENKINS_USER=jenkins
+JENKINS_WAR=/usr/share/jenkins/jenkins.war
+JENKINS_HOME=<%= home_dir %>
+JAVA_ARGS="-Dorg.apache.commons.jelly.tags.fmt.timeZone=<%= timezone %> -Duser.timezone=<%= timezone %>"
+RUN_STANDALONE=true
+JENKINS_LOG=/var/log/jenkins/$NAME.log
+MAXOPENFILES=8192
+HTTP_PORT=<%= port %>
+AJP_PORT=-1
+PREFIX=<%= webroot %>
+JENKINS_ARGS="--webroot=/var/cache/jenkins/war --httpPort=$HTTP_PORT --ajp13Port=$AJP_PORT"

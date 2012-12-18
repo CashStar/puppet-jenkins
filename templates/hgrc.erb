@@ -1,0 +1,32 @@
+[extensions]
+convert=
+extdiff=
+graphlog=
+patchbomb=
+record=
+fetch=
+mq=
+color=
+pager=
+
+<% if @kiln_prefix %>
+[auth]
+kiln.prefix = https://<%= kiln_prefix %>.kilnhg.com/
+kiln.username = <%= kiln_username %>
+kiln.password = <%= kiln_password %>
+[hostfingerprints]
+<%= kiln_prefix %>.kilnhg.com = <%= kiln_fingerprint %>
+<% end %>
+[trusted]
+groups = root
+
+[color]
+status.modified = blue bold
+status.added = green bold
+status.removed = white bold red_background
+status.deleted = cyan bold
+status.unknown = none
+status.ignored = black inverse
+
+[pager]
+pager=LESS='FSRX' less
