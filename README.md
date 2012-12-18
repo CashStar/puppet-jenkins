@@ -39,4 +39,5 @@ Use [this](http://www.htaccesstools.com/htpasswd-generator/) web tool to generat
 TODO
 ----
 
-Integrate nginx config with nginx puppet module
+* SSL cert in module. Generate?
+* SSL optional
